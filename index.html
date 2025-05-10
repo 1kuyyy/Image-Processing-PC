@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>065122060</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Pengolahan<span>Citra</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="list"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Image Processing<span> App</span></h1>
+        <a href="#" class="cta">065122060 - Rizky Ramadhani - Gab B</a>
+      </main>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+      <h2><span>Input </span>Gambar</h2>
+
+      <div class="row">
+        <div class="about-img">
+          <input type="file" id="upload" accept="image/*"/>
+          <br />
+          <canvas id="originalCanvas"></canvas>
+          <canvas id="processedCanvas"></canvas>
+        </div>
+        <div class="content">
+          <h3>Jenis Citra</h3>
+          <button onclick="Grayscale()">Grayscale</button>
+          <button onclick="Biner()">Biner</button>
+  
+          <h3>Operasi Pixel</h3>
+          <button onclick="Brightness(20)">Brightness +</button>
+          <button onclick="Brightness(-20)">Brightness -</button>
+          <button onclick="Contrast(1.2)">Contrast +</button>
+          <button onclick="Contrast(0.8)">Contrast -</button>
+  
+          <h3>Filter</h3>
+          <button onclick="Filter('rerata')">Rerata</button>
+          <button onclick="Filter('median')">Median</button>
+          <button onclick="Filter('roberts')">Batas(roberts)</button>
+  
+          <h3>Operasi Konvolusi</h3>
+          <button onclick="Filter('konvolusi')">Konvolusi</button>
+
+          <h3>Operasi Geometri</h3>
+          <button onclick="Geometri('translasi', { dx: 50, dy: 30 })">Translasi</button>
+          <button onclick="Geometri('rotasi', { angle: 180 })">Rotasi</button>
+          <button onclick="Geometri('scaling', { sx: 1.1, sy: 1.1})">Scaling</button><br>
+          <button onclick="ResetImage()" style="padding: 0.9rem; margin-top: 3rem;" >Reset Gambar</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">Home</a>
+      </div>
+
+      <div class="credit">
+        <p>Created by <a href="">Ikuyyy</a> | &copy; 2025</p>
+      </div>
+    </footer>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
