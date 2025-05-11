@@ -193,6 +193,10 @@ body {
   cursor: pointer;
 }
 
+.about .row .content button:hover {
+  color: white;
+}
+
 .about .row .content h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
